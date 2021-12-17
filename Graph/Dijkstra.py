@@ -1,41 +1,51 @@
 import heapq
 import sys
 input = sys.stdin.readline
-INF = int(1e9)
+INF = int(1e9)  # to denote infinity
 
+# input number of nodes(n) and edges(m)
+n, m = map(int, input().split())
+# input the starting node number
+start = int(input())
+# create a list that holds the connectivity information
+graph = [[] for i in range(n + 1)]
+# set all values of the shortest path table to INF
+distance = [INF] * (n + 1)
+
+# input all edge information
+for _ in range(m):
+    a, b, c = map(int, input().split())
+    # set C as a cost to go from A to B
+    graph[a].append((b, c))
+    
 def dijkstra(start):
-    # Set the start node.
-    q = [(0, start)]
+    q = []
+    # set 0 as the cost to the starting node and insert it into the queue
+    heapq.heappush(q, (0, start))
     distance[start] = 0
-    while q: # Until the queue is empty.
-        # Pop the node who has the shortest path.
+    while q:    # while the queue is not empty
+        # get the info of the node with the shortest distance
         dist, now = heapq.heappop(q)
-        # If the node is already processed, pass.
+        # if the current node is already processed, ignore
         if distance[now] < dist:
             continue
-        # Check the adjacent nodes of the current node.
+        # examine connected nodes to the current node
         for i in graph[now]:
             cost = dist + i[1]
-            # If the distance is shorter when going through the current node to the adjacent node.
+            # update if the distance that goes through the current node is shorter
             if cost < distance[i[0]]:
                 distance[i[0]] = cost
                 heapq.heappush(q, (cost, i[0]))
+            
 
-n, m = map(int, input().split())
-start = int(input())
-graph = [[] for i in range(n + 1)]
-distance = [INF] * (n + 1)
-
-for _ in range(m):
-    a, b, c = map(int, input().split())
-    graph[a].append((b, c))
-
-# Run the Dijkstra algorithm.
+# run Dijkstra Shortest Path algorithm
 dijkstra(start)
 
-# Print all the shortest paths to all nodes.
+# print all shortest distances to all the nodes
 for i in range(1, n + 1):
+    # print "INFINITY" if cannot be reached
     if distance[i] == INF:
         print("INFINITY")
+    # print the distance if can be reached
     else:
         print(distance[i])
