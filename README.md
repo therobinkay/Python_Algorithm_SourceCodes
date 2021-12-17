@@ -9,7 +9,7 @@
 ### Sorting
 * [Selection Sort](Sorting/SelectionSort.py)
 * [Insertion Sort](Sorting/InsertionSort.py)
-* [Quick Sort]
+* Quick Sort
   * [Standard Quick Sort](Sorting/QuickSort1.py)
   * [Pythonic Quick Sort](Sorting/QuickSort2.py): simpler, more time complexity
 * [Count Sort](Sorting/CountSort.py)
