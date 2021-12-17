@@ -22,6 +22,7 @@
   * [Iterative Method](Searching/BinarySearchIt.py)
 
 ### Graph
+* [Dijkstra Shortest Path](Graph/Dijkstra.py)
 
 ### Data Structure
 
