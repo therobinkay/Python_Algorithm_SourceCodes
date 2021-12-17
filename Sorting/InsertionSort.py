@@ -1,3 +1,9 @@
+'''
+- Check each data and insert it at an appropriate place
+- More efficient than Selection Sort: O(N)~O(N^2)
+- Way more efficient when the data is already almost sorted
+'''
+
 # input example
 array = [7, 5, 9, 0, 3, 1, 6, 2, 4, 8]
 
@@ -9,9 +15,3 @@ for i in range(1, len(array)):
             break
 
 print(array)
-
-'''
-- Check each data and insert it at an appropriate place
-- More efficient than Selection Sort: O(N)~O(N^2)
-- Way more efficient when the data is already almost sorted
-'''
