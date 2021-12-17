@@ -17,7 +17,8 @@
 ### Searching
 * [DFS](Searching/DFS.py)
 * [BFS](Searching/BFS.py)
-* Binary Searching
+* Binary Search
+  * [Recursive Method](Searching/BinarySearchRec.py)
   * [Iterative Method](Searching/BinarySearchIt.py)
 
 ### Graph
