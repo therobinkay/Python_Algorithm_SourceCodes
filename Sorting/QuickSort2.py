@@ -12,7 +12,7 @@ def quick_sort(array):
     left_side = [x for x in tail if x <= pivot] # left part after the split
     right_side = [x for x in tail if x > pivot] # right part after the split
 
-    # 분할 이후 왼쪽 부분과 오른쪽 부분에서 각각 정렬을 수행하고, 전체 리스트를 변환
+    # separately sort the left and the right part after the split, and return the entire list
     return quick_sort(left_side) + [pivot] + quick_sort(right_side)
 
 print(quick_sort(array))
