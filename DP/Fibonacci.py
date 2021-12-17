@@ -1,4 +1,6 @@
-# Recursive Function
+'''
+Top-Down DP w/ Memoization: Recursive Function
+'''
 # input: which fibonacci number?
 n = int(input())
 d = [0] * (n+1)
@@ -15,3 +17,18 @@ def fibo(x):
 
 # return the nth fibonacci number
 fibo(n)
+
+'''
+Bottom-Up DP: Iterative Method
+'''
+# input: which fibonacci number?
+n = int(input())
+d = [0] * (n+1)
+d[1] = 1
+d[2] = 1
+
+for i in range(3, n+1):
+    d[i] = d[i-1] + d[i-2]
+
+# print the nth fibonacci number
+print(d[n])
