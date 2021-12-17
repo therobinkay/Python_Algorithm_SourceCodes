@@ -28,7 +28,7 @@
 ### String
 
 ### Dynamic Programming
-* [Fibonacci](Dynamic Programming/Fibonacci.py)
+* [Fibonacci](DP/Fibonacci.py)
 
 ### Geometry
 
