@@ -9,6 +9,8 @@
 ### Sorting
 
 ### Searching
+* [DFS](Searching/DFS.py)
+* [BFS](Searching/BFS.py)
 
 ### Graph
 
