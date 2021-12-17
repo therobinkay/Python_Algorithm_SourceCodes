@@ -1,3 +1,8 @@
+'''
+* Select the smallest element and swap it with the first element, and select the second smallest and swap it with the second, repeat
+* Inefficient Time Complexity: O(N^2)
+'''
+
 # input example
 array = [7, 5, 9, 0, 3, 1, 6, 2, 4, 8]
 
@@ -9,8 +14,3 @@ for i in range(len(array)):
     array[i], array[min_index] = array[min_index], array[i] # swap
 
 print(array)
-
-'''
-* Select the smallest element and swap it with the first element, and select the second smallest and swap it with the second, repeat
-* Inefficient Time Complexity: O(N^2)
-'''
